@@ -1,6 +1,15 @@
 import React from "react";
+import Header from "./Header";
+import Footer from "./Footer";
+import Body from "./Body";
 
 export default function App() {
   // JSX
-  return <h1>Welcome to ReactJS</h1>;
+  return (
+    <div>
+      <Header />
+      <Body />
+      <Footer />
+    </div>
+  );
 }
