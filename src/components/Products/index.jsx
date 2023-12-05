@@ -45,12 +45,17 @@ function addIdsToProducts(products) {
   }));
 }
 
-export default function Products() {
+export default function Products(props) {
   // JSX
   return (
     <section>
       {addIdsToProducts(products).map((product) => (
-        <Product key={product.id} product={product} />
+        <Product
+          key={product.id}
+          product={product}
+          user={props.user}
+          handleAddItemToCart={props.handleAddItemToCart}
+        />
       ))}
     </section>
   );

@@ -1,9 +1,12 @@
 import Products from "./Products";
 
-export default function Body() {
+export default function Body(props) {
   return (
     <section>
-      <Products />
+      <Products
+        user={props.user}
+        handleAddItemToCart={props.handleAddItemToCart}
+      />
     </section>
   );
 }
